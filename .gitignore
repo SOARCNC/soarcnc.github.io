@@ -1,0 +1,23 @@
+# --- NEVER COMMIT CLIENT MATERIALS ---
+source-materials/
+
+# --- Secrets ---
+.env
+.env.*
+*.key
+*.pem
+
+# --- Dependencies / build ---
+node_modules/
+dist/
+.cache/
+
+# --- Local tool config ---
+.claude/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

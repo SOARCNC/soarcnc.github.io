@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- EN pages — each lists its 繁中 pair via xhtml:link -->
+  <url>
+    <loc>https://soartaiwan.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/about.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/contact.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/privacy.html"/>
+  </url>
+
+  <!-- 繁中 pages -->
+  <url>
+    <loc>https://soartaiwan.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/about.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/contact.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/privacy.html"/>
+  </url>
+
+</urlset>
