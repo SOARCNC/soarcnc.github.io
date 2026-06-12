@@ -1,22 +1,32 @@
 /* =========================================================
    SOAR CNC — base stylesheet (industrial / technical)
-   Save as UTF-8 without BOM.
+   Light + dark theme. Save as UTF-8 without BOM.
    ========================================================= */
 
 :root {
+  /* Font system: SF Pro on Apple, Segoe UI on Windows, Roboto on Android;
+     PingFang TC / Microsoft JhengHei / Noto Sans TC for 繁體中文. */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', 'Noto Sans TC', sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', 'Noto Sans TC', sans-serif;
+
+  /* Light theme (default) */
   --color-bg: #ffffff;
   --color-text: #16191d;
   --color-muted: #5c6470;
-  --color-steel: #1f262d;     /* dark charcoal — header/footer/hero */
-  --color-steel-2: #141a1f;   /* deeper charcoal */
+  --color-surface: #ffffff;    /* cards */
+  --color-card: #f5f7f8;       /* alt sections / subtle fills */
+  --color-border: #e8ecef;
+
+  --color-steel: #1f262d;      /* dark charcoal — header/footer/hero (both themes) */
+  --color-steel-2: #141a1f;
   --color-accent: #2e9e44;     /* SOAR green (logo + 五色鳥 body) */
   --color-accent-dark: #24813a;
   --color-accent-soft: #eaf5ec;/* pale green surface */
+  --color-accent-ink: #24813a; /* text on soft-green fills */
   --color-accent-2: #e8b431;   /* 五色鳥 gold */
   --color-accent-teal: #149aab;/* 五色鳥 teal */
   --color-accent-coral: #e0533d;/* 五色鳥 red */
-  --color-border: #e8ecef;
-  --color-card: #f5f7f8;
+
   --max-width: 1140px;
   --space: 1.25rem;
   --radius: 16px;
@@ -26,6 +36,35 @@
   --shadow-hover: 0 2px 8px rgba(16,25,20,.07), 0 20px 48px rgba(16,25,20,.12);
 }
 
+/* Dark theme values — applied automatically by system pref (unless forced light),
+   or explicitly when the user toggles to dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0d0f12;
+    --color-text: #e9ebee;
+    --color-muted: #9aa3ad;
+    --color-surface: #161a20;
+    --color-card: #12151a;
+    --color-border: #2a3038;
+    --color-accent-soft: rgba(46,158,68,.18);
+    --color-accent-ink: #7ed598;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,.5), 0 20px 48px rgba(0,0,0,.6);
+  }
+}
+[data-theme="dark"] {
+  --color-bg: #0d0f12;
+  --color-text: #e9ebee;
+  --color-muted: #9aa3ad;
+  --color-surface: #161a20;
+  --color-card: #12151a;
+  --color-border: #2a3038;
+  --color-accent-soft: rgba(46,158,68,.18);
+  --color-accent-ink: #7ed598;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.45);
+  --shadow-hover: 0 2px 8px rgba(0,0,0,.5), 0 20px 48px rgba(0,0,0,.6);
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
@@ -33,13 +72,10 @@ body {
   margin: 0;
   background: var(--color-bg);
   color: var(--color-text);
-  /* System Chinese fonts — no download, fastest render. */
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', 'Noto Sans TC',
-    sans-serif;
+  font-family: var(--font-sans);
   font-size: 17px;
   line-height: 1.7;
+  transition: background-color .2s ease, color .2s ease;
 }
 
 /* 繁體中文 typography */
@@ -50,7 +86,7 @@ body {
   text-align: left;
 }
 
-h1, h2, h3 { line-height: 1.35; margin: 0 0 0.6rem; color: var(--color-text); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.35; margin: 0 0 0.6rem; color: var(--color-text); }
 h1 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); letter-spacing: -0.01em; }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.01em; }
 h3 { font-size: 1.18rem; }
@@ -68,11 +104,17 @@ img { max-width: 100%; height: auto; display: block; }
 .brand { display: inline-flex; align-items: center; gap: .5rem; font-weight: 800; font-size: 1.25rem; letter-spacing: 0.04em; color: #fff; text-decoration: none; }
 .brand::before { content: ""; width: 78px; height: 29px; background: url("/assets/images/logo-mark.webp") left center / contain no-repeat; flex: 0 0 auto; }
 .brand span { color: var(--color-accent-2); }
+.site-nav { display: flex; align-items: center; }
 .site-nav a { margin-left: 1.2rem; color: #d7dde4; text-decoration: none; font-size: 0.95rem; }
 .site-nav a:hover { color: #fff; }
 .lang-switch { font-weight: 700; color: var(--color-accent-2) !important; }
 
-/* ---- Hero (dark) ---- */
+/* ---- Theme toggle (injected into nav) ---- */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-left: .9rem; padding: 0; border: 1px solid #ffffff33; border-radius: 8px; background: transparent; color: #d7dde4; cursor: pointer; flex: 0 0 auto; transition: background-color .15s ease, color .15s ease; }
+.theme-toggle:hover { color: #fff; background: #ffffff14; }
+.theme-toggle svg { width: 18px; height: 18px; }
+
+/* ---- Hero (dark in both themes) ---- */
 .hero {
   background: linear-gradient(180deg, var(--color-steel) 0%, var(--color-steel-2) 100%);
   color: #fff;
@@ -99,9 +141,9 @@ section.alt { background: var(--color-card); border-top: 1px solid var(--color-b
 
 /* ---- Capability cards ---- */
 .cap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-.cap-card { background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); }
+.cap-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); }
 .cap-card h3 { margin-top: 0; }
-.cap-card .num { display: inline-flex; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--color-accent-soft); font-size: 0.85rem; font-weight: 800; color: var(--color-accent-dark); margin-bottom: .5rem; }
+.cap-card .num { display: inline-flex; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--color-accent-soft); font-size: 0.85rem; font-weight: 800; color: var(--color-accent-ink); margin-bottom: .5rem; }
 
 /* ---- Spec table ---- */
 .spec-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 1.25rem 0; font-size: 0.97rem; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; }
@@ -111,33 +153,33 @@ section.alt { background: var(--color-card); border-top: 1px solid var(--color-b
 
 /* ---- Certification badges ---- */
 .badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
-.badge { border: 1px solid var(--color-border); border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.85rem; font-weight: 600; color: var(--color-muted); background: #fff; }
+.badge { border: 1px solid var(--color-border); border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.85rem; font-weight: 600; color: var(--color-muted); background: var(--color-surface); }
 
 /* ---- Industry pills ---- */
 .pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
-.pill { background: var(--color-accent-soft); color: var(--color-accent-dark); border-radius: 999px; padding: 0.5rem 1.05rem; font-size: 0.9rem; font-weight: 600; }
+.pill { background: var(--color-accent-soft); color: var(--color-accent-ink); border-radius: 999px; padding: 0.5rem 1.05rem; font-size: 0.9rem; font-weight: 600; }
 
 /* ---- Photo gallery ---- */
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1.75rem; }
-.gallery figure { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: #fff; box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }
+.gallery figure { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: var(--color-surface); box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }
 .gallery figure:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
 .gallery img { width: 100%; height: 260px; object-fit: cover; display: block; }
 .gallery figcaption { padding: 0.85rem 1rem; font-size: 0.95rem; font-weight: 600; color: var(--color-text); }
 
 /* ---- Tally embed placeholder boxes ---- */
-.form-block { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.6rem; margin: 1.25rem 0; background: #fff; box-shadow: var(--shadow); }
+.form-block { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.6rem; margin: 1.25rem 0; background: var(--color-surface); box-shadow: var(--shadow); }
 .form-block h3 { margin-top: 0; }
 .form-block.primary { border: 2px solid var(--color-accent); }
 .form-embed { margin-top: 1rem; padding: 1.75rem; border: 1px dashed var(--color-border); border-radius: var(--radius-sm); color: var(--color-muted); font-size: .9rem; text-align: center; background: var(--color-card); }
 
 /* ---- Footer ---- */
-.site-footer { background: var(--color-steel-2); color: #aeb6c0; padding: 2.5rem 0; font-size: 0.92rem; }
+.site-footer { background: var(--color-steel-2); color: #aeb6c0; padding: 2.5rem 0; font-size: 0.92rem; border-top: 1px solid var(--color-border); }
 .site-footer a { color: #d7dde4; }
 .site-footer strong { color: #fff; }
 
 /* ---- Clickable cards ---- */
 a.cap-card { text-decoration: none; color: inherit; display: block; transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease; }
-a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: #d9eadd; }
+a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--color-accent); }
 .cap-card .more { display: inline-block; margin-top: .6rem; font-size: .85rem; font-weight: 600; color: var(--color-accent); }
 .inline-link { display: inline-block; margin-top: 1rem; font-weight: 600; }
 
@@ -164,7 +206,7 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
 
 /* ---- Contact methods (copy / open) ---- */
 .contact-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
-.contact-card { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.3rem; background: #fff; box-shadow: var(--shadow); }
+.contact-card { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.3rem; background: var(--color-surface); box-shadow: var(--shadow); }
 .contact-card .label { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--color-muted); }
 .contact-card .value { font-size: 1.05rem; font-weight: 600; margin: .3rem 0 .7rem; word-break: break-all; }
 .contact-card.pending .value { color: var(--color-muted); font-weight: 500; }
@@ -183,6 +225,7 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
   .site-nav a { margin: 0; padding: .55rem .7rem; border-radius: 6px; }
   .site-nav a:hover { background: #ffffff14; }
   .lang-switch { margin-left: auto; }
+  .theme-toggle { margin-left: .4rem; }
 }
 @media (max-width: 680px) {
   body { font-size: 16px; }
