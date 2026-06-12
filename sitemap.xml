@@ -9,6 +9,26 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/"/>
   </url>
   <url>
+    <loc>https://soartaiwan.com/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/service.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/service.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/quality.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/quality.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/quality.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/capabilities.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/capabilities.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/industries.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/industries.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/industries.html"/>
+  </url>
+  <url>
     <loc>https://soartaiwan.com/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/about.html"/>
@@ -29,6 +49,26 @@
     <loc>https://soartaiwan.com/zh/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/service.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/service.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/quality.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/quality.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/quality.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/capabilities.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/capabilities.html"/>
+  </url>
+  <url>
+    <loc>https://soartaiwan.com/zh/industries.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/industries.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/industries.html"/>
   </url>
   <url>
     <loc>https://soartaiwan.com/zh/about.html</loc>
