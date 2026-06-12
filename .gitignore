@@ -1,5 +1,6 @@
-# --- NEVER COMMIT CLIENT MATERIALS ---
+# --- NEVER COMMIT CLIENT MATERIALS (raw originals stay local) ---
 source-materials/
+SOAR Website Pictures/
 
 # --- Secrets ---
 .env

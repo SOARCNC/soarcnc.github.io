@@ -26,7 +26,7 @@ param(
   [Parameter(Mandatory=$true)] [string]$InputPath,
   [Parameter(Mandatory=$true)] [string]$Name,
   [switch]$Hero,
-  [string]$OutDir   = "$PSScriptRoot\..\src\assets\images",
+  [string]$OutDir   = "$PSScriptRoot\..\assets\images",
   [string]$BackupDir = "$PSScriptRoot\..\source-materials\originals",
   [int]$Quality = 82
 )
