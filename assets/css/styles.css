@@ -99,19 +99,21 @@ img { max-width: 100%; height: auto; display: block; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 700; color: var(--color-accent); }
 
 /* ---- Header / nav ---- */
-.site-header { background: var(--color-steel); color: #fff; }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 1.25rem; }
-.brand { display: inline-flex; align-items: center; gap: .5rem; font-weight: 800; font-size: 1.25rem; letter-spacing: 0.04em; color: #fff; text-decoration: none; }
+.site-header { background: var(--color-surface); color: var(--color-text); border-bottom: 1px solid var(--color-border); position: relative; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 1.25rem; position: relative; z-index: 1; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; font-weight: 800; font-size: 1.25rem; letter-spacing: 0.04em; color: var(--color-text); text-decoration: none; }
 .brand::before { content: ""; width: 78px; height: 29px; background: url("/assets/images/logo-mark.webp") left center / contain no-repeat; flex: 0 0 auto; }
-.brand span { color: var(--color-accent-2); }
+.brand span { color: var(--color-accent); }
 .site-nav { display: flex; align-items: center; }
-.site-nav a { margin-left: 1.2rem; color: #d7dde4; text-decoration: none; font-size: 0.95rem; }
-.site-nav a:hover { color: #fff; }
-.lang-switch { font-weight: 700; color: var(--color-accent-2) !important; }
+.site-nav a { margin-left: 1.2rem; color: var(--color-muted); text-decoration: none; font-size: 0.95rem; }
+.site-nav a:hover { color: var(--color-text); }
+.lang-switch { font-weight: 700; color: var(--color-accent) !important; }
+/* Optional faded real-life photo behind the header: add class "has-photo" and style="--header-img:url('/assets/images/your-photo.webp')" on the <header>. */
+.site-header.has-photo::before { content: ""; position: absolute; inset: 0; background: var(--header-img) center / cover no-repeat; opacity: .10; filter: blur(1px); pointer-events: none; }
 
 /* ---- Theme toggle (injected into nav) ---- */
-.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-left: .9rem; padding: 0; border: 1px solid #ffffff33; border-radius: 8px; background: transparent; color: #d7dde4; cursor: pointer; flex: 0 0 auto; transition: background-color .15s ease, color .15s ease; }
-.theme-toggle:hover { color: #fff; background: #ffffff14; }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-left: .9rem; padding: 0; border: 1px solid var(--color-border); border-radius: 8px; background: transparent; color: var(--color-muted); cursor: pointer; flex: 0 0 auto; transition: background-color .15s ease, color .15s ease; }
+.theme-toggle:hover { color: var(--color-text); background: var(--color-card); }
 .theme-toggle svg { width: 18px; height: 18px; }
 
 /* ---- Hero (dark in both themes) ---- */
@@ -259,6 +261,8 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
 .news-date { color: var(--color-muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .4rem; }
 .news-card h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
 .news-card p { margin: 0; }
+.news-card > img { width: 100%; height: 168px; object-fit: cover; display: block; }
+.news-card[id] { scroll-margin-top: 1.5rem; }
 
 /* ---- Back to top ---- */
 .to-top { position: fixed; right: 20px; bottom: 20px; width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--color-accent); color: #fff; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.28); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s ease, transform .2s ease, background-color .15s ease; z-index: 9998; display: inline-flex; align-items: center; justify-content: center; }
@@ -271,7 +275,7 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
   .site-header .wrap { flex-direction: column; align-items: stretch; gap: .5rem; padding: .8rem 1rem; }
   .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .1rem .2rem; width: 100%; }
   .site-nav a { margin: 0; padding: .55rem .7rem; border-radius: 6px; }
-  .site-nav a:hover { background: #ffffff14; }
+  .site-nav a:hover { background: var(--color-card); }
   .lang-switch { margin-left: auto; }
   .theme-toggle { margin-left: .4rem; }
 }
