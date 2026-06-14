@@ -18,30 +18,52 @@
     return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
   }
 
-  function paint(btn) {
+  function paintToggle(btn) {
     var mode = currentMode();
-    // Show the icon for what clicking will switch TO.
     btn.innerHTML = mode === "dark" ? SUN : MOON;
     var label = mode === "dark" ? "Switch to light mode" : "Switch to dark mode";
     btn.setAttribute("aria-label", label);
     btn.setAttribute("title", label);
   }
 
-  function init() {
+  function initToggle() {
     var nav = document.querySelector(".site-nav");
     if (!nav || nav.querySelector(".theme-toggle")) return;
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "theme-toggle";
-    paint(btn);
+    paintToggle(btn);
     btn.addEventListener("click", function () {
       var next = currentMode() === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
       try { localStorage.setItem(KEY, next); } catch (e) {}
-      paint(btn);
+      paintToggle(btn);
     });
     nav.appendChild(btn);
   }
+
+  // 2) Back-to-top button (appears after scrolling down).
+  function initToTop() {
+    if (document.querySelector(".to-top")) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "to-top";
+    btn.setAttribute("aria-label", "Back to top");
+    btn.setAttribute("title", "Back to top");
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.body.appendChild(btn);
+    function onScroll() {
+      if (window.scrollY > 400) btn.classList.add("show");
+      else btn.classList.remove("show");
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  function init() { initToggle(); initToTop(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
