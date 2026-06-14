@@ -63,7 +63,29 @@
     onScroll();
   }
 
-  function init() { initToggle(); initToTop(); }
+  // 3) Mobile hamburger menu.
+  function initHamburger() {
+    var header = document.querySelector(".site-header");
+    var wrap = header && header.querySelector(".wrap");
+    if (!wrap || wrap.querySelector(".nav-toggle")) return;
+    var nav = wrap.querySelector(".site-nav");
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "nav-toggle";
+    btn.setAttribute("aria-label", "Menu");
+    btn.setAttribute("aria-expanded", "false");
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+    btn.addEventListener("click", function () {
+      var open = header.classList.toggle("nav-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    wrap.insertBefore(btn, nav);
+    if (nav) nav.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") header.classList.remove("nav-open");
+    });
+  }
+
+  function init() { initToggle(); initHamburger(); initToTop(); }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
