@@ -32,8 +32,8 @@
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-src https://tally.so; script-src 'self' https://tally.so; base-uri 'self'; form-action 'self' https://tally.so">
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260615b">
-  <script src="/assets/js/theme.js?v=20260615b"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260615c">
+  <script src="/assets/js/theme.js?v=20260615c"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://soartaiwan.com/zh/"},{"@type":"ListItem","position":2,"name":"聯絡我們","item":"https://soartaiwan.com/zh/contact.html"}]}
   </script>
@@ -66,46 +66,30 @@
 
     <section>
       <div class="wrap">
-        <div class="photo-box" style="margin: 1.5rem 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9a2 2 0 0 1 2-2h1.5l1.2-1.6a1 1 0 0 1 .8-.4h5a1 1 0 0 1 .8.4L18.5 7H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.2"/></svg><span class="ph-label">團隊或廠房照片</span><span class="ph-hint">可在此放上團隊或廠房照片（參考對方網站）。</span></div>
-<div class="contact-methods">
-          <div class="contact-card">
-            <div class="label">電子郵件</div>
-            <div class="value">info@soartaiwan.com</div>
-            <button class="copy-btn" type="button" data-contact="email" data-value="info@soartaiwan.com">複製並寄信</button>
+        <div class="contact-layout">
+          <div class="contact-intro">
+            <p class="eyebrow">我們樂於協助</p>
+            <h2>與我們聯絡</h2>
+            <p class="muted">請告訴我們您的零件與需求——圖面、材料、數量與期望交期，我們將盡快回覆。</p>
+            <div class="contact-methods">
+              <div class="contact-card"><div class="label">電子郵件</div><div class="value">info@soartaiwan.com</div><button class="copy-btn" type="button" data-contact="email" data-value="info@soartaiwan.com">複製並寄信</button></div>
+              <div class="contact-card pending"><div class="label">電話</div><div class="value">待提供</div><button class="copy-btn" type="button" data-contact="phone" data-value="" disabled>複製並撥打</button></div>
+            </div>
+            <p class="muted" style="font-size:.85rem">您的資料以安全方式傳送且絕不販售——詳見<a href="/zh/privacy.html">隱私權政策</a>。</p>
           </div>
-          <div class="contact-card pending">
-            <div class="label">電話</div>
-            <div class="value">待提供</div>
-            <button class="copy-btn" type="button" data-contact="phone" data-value="" disabled>複製並撥打</button>
-          </div>
-          <div class="contact-card pending">
-            <div class="label">地址</div>
-            <div class="value">待提供</div>
-            <button class="copy-btn" type="button" data-contact="address" data-value="" disabled>複製並開啟地圖</button>
-          </div>
-        </div>
-
-        <p class="muted" style="margin-bottom:1.75rem">您的資料透過加密連線傳送，並私密儲存於受雙重驗證（2FA）保護的 Google 試算表中。我們絕不販售您的資料——詳見<a href="/zh/privacy.html">隱私權政策</a>。</p>
-
-        <div class="form-block primary" id="rfq">
-          <h3>索取報價（RFQ）</h3>
-          <p class="muted">請說明零件、材料、數量、公差與期望交期，並附上圖面（STEP / PDF / DWG），我們將回覆報價。</p>
-          <!-- TALLY_FORM_QUOTE_CART  →  將 Tally「索取報價」的內嵌程式碼貼於此，取代下方占位 -->
-          <div class="form-embed" data-form="quote">連接 Tally 後，報價表單將顯示於此。</div>
-        </div>
-
-        <div class="form-block">
-          <h3>一般詢問</h3>
-          <p class="muted">對加工能力、交期或合作方式有任何問題？歡迎來訊。</p>
-          <!-- TALLY_FORM_CONTACT  →  將 Tally「一般詢問」的內嵌程式碼貼於此 -->
-          <div class="form-embed" data-form="contact">連接 Tally 後，聯絡表單將顯示於此。</div>
-        </div>
-
-        <div class="form-block">
-          <h3>訂閱電子報</h3>
-          <p class="muted">不定期分享我們的加工能力與產能資訊，絕不濫發。</p>
-          <!-- TALLY_FORM_NEWSLETTER  →  將 Tally「電子報」的內嵌程式碼貼於此 -->
-          <div class="form-embed" data-form="newsletter">連接 Tally 後，訂閱表單將顯示於此。</div>
+          <form class="lead-form" id="lead-form" novalidate>
+            <div class="field-row">
+              <div class="field"><label>名字 <span class="req">*</span></label><input type="text" name="first" autocomplete="given-name" required></div>
+              <div class="field"><label>姓氏 <span class="req">*</span></label><input type="text" name="last" autocomplete="family-name" required></div>
+            </div>
+            <div class="field"><label>公司電子郵件 <span class="req">*</span></label><input type="email" name="email" autocomplete="email" required></div>
+            <div class="field"><label>公司名稱</label><input type="text" name="company" autocomplete="organization"></div>
+            <div class="field"><label>電話</label><input type="tel" name="phone" autocomplete="tel"></div>
+            <div class="field"><label>有什麼可以協助您？ <span class="req">*</span></label><textarea name="message" required></textarea></div>
+            <div class="field"><label>您如何得知我們？</label><select name="source"><option value="">請選擇&#8230;</option><option>Google 搜尋</option><option>親友轉介</option><option>展覽</option><option>社群媒體</option><option>其他</option></select></div>
+            <button type="submit" class="btn">送出</button>
+            <p class="form-note">僅為預覽，目前尚未儲存資料，我們將接著連接到您的 Google 試算表。</p>
+          </form>
         </div>
       </div>
     </section>
@@ -144,6 +128,6 @@
         </div>
       </div>
     </footer>
-  <script src="/assets/js/contact.js?v=20260615b"></script>
+  <script src="/assets/js/contact.js?v=20260615c"></script>
 </body>
 </html>

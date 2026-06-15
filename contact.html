@@ -32,8 +32,8 @@
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-src https://tally.so; script-src 'self' https://tally.so; base-uri 'self'; form-action 'self' https://tally.so">
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260615b">
-  <script src="/assets/js/theme.js?v=20260615b"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260615c">
+  <script src="/assets/js/theme.js?v=20260615c"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://soartaiwan.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://soartaiwan.com/contact.html"}]}
   </script>
@@ -67,46 +67,30 @@
 
     <section>
       <div class="wrap">
-        <div class="photo-box" style="margin: 1.5rem 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9a2 2 0 0 1 2-2h1.5l1.2-1.6a1 1 0 0 1 .8-.4h5a1 1 0 0 1 .8.4L18.5 7H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.2"/></svg><span class="ph-label">Team or facility photo</span><span class="ph-hint">Add a photo of your team or workshop here (like the reference site).</span></div>
-<div class="contact-methods">
-          <div class="contact-card">
-            <div class="label">Email</div>
-            <div class="value">info@soartaiwan.com</div>
-            <button class="copy-btn" type="button" data-contact="email" data-value="info@soartaiwan.com">Copy &amp; send email</button>
+        <div class="contact-layout">
+          <div class="contact-intro">
+            <p class="eyebrow">We're here to help</p>
+            <h2>Get in touch</h2>
+            <p class="muted">Tell us about your parts and requirements — drawings, materials, quantities and target lead time. Our team will get back to you.</p>
+            <div class="contact-methods">
+              <div class="contact-card"><div class="label">Email</div><div class="value">info@soartaiwan.com</div><button class="copy-btn" type="button" data-contact="email" data-value="info@soartaiwan.com">Copy &amp; send email</button></div>
+              <div class="contact-card pending"><div class="label">Phone</div><div class="value">To be provided</div><button class="copy-btn" type="button" data-contact="phone" data-value="" disabled>Copy &amp; call</button></div>
+            </div>
+            <p class="muted" style="font-size:.85rem">Your details are sent securely and never sold — see our <a href="/privacy.html">Privacy Policy</a>.</p>
           </div>
-          <div class="contact-card pending">
-            <div class="label">Phone</div>
-            <div class="value">To be provided</div>
-            <button class="copy-btn" type="button" data-contact="phone" data-value="" disabled>Copy &amp; call</button>
-          </div>
-          <div class="contact-card pending">
-            <div class="label">Address</div>
-            <div class="value">To be provided</div>
-            <button class="copy-btn" type="button" data-contact="address" data-value="" disabled>Copy &amp; open in Maps</button>
-          </div>
-        </div>
-
-        <p class="muted" style="margin-bottom:1.75rem">Your details are sent over an encrypted connection and stored privately in our secured Google Sheet (two-factor protected). We never sell your data — see our <a href="/privacy.html">Privacy Policy</a>.</p>
-
-        <div class="form-block primary" id="rfq">
-          <h3>Request a Quote (RFQ)</h3>
-          <p class="muted">Tell us the part, material, quantity, tolerance and target lead time — attach drawings (STEP / PDF / DWG) and we'll respond with a quotation.</p>
-          <!-- TALLY_FORM_QUOTE_CART  →  paste the Tally "Request a Quote" inline embed code here, replacing the placeholder below -->
-          <div class="form-embed" data-form="quote">Quotation form loads here once connected to Tally.</div>
-        </div>
-
-        <div class="form-block">
-          <h3>General Enquiry</h3>
-          <p class="muted">Questions about capabilities, lead times or working with us? Send us a message.</p>
-          <!-- TALLY_FORM_CONTACT  →  paste the Tally "General Enquiry" inline embed code here -->
-          <div class="form-embed" data-form="contact">Contact form loads here once connected to Tally.</div>
-        </div>
-
-        <div class="form-block">
-          <h3>Newsletter</h3>
-          <p class="muted">Occasional updates on our capabilities and capacity. No spam.</p>
-          <!-- TALLY_FORM_NEWSLETTER  →  paste the Tally "Newsletter" inline embed code here -->
-          <div class="form-embed" data-form="newsletter">Sign-up form loads here once connected to Tally.</div>
+          <form class="lead-form" id="lead-form" novalidate>
+            <div class="field-row">
+              <div class="field"><label>First name <span class="req">*</span></label><input type="text" name="first" autocomplete="given-name" required></div>
+              <div class="field"><label>Last name <span class="req">*</span></label><input type="text" name="last" autocomplete="family-name" required></div>
+            </div>
+            <div class="field"><label>Work email <span class="req">*</span></label><input type="email" name="email" autocomplete="email" required></div>
+            <div class="field"><label>Company</label><input type="text" name="company" autocomplete="organization"></div>
+            <div class="field"><label>Phone</label><input type="tel" name="phone" autocomplete="tel"></div>
+            <div class="field"><label>How can we help? <span class="req">*</span></label><textarea name="message" required></textarea></div>
+            <div class="field"><label>How did you find us?</label><select name="source"><option value="">Select&#8230;</option><option>Google search</option><option>Referral</option><option>Trade show / exhibition</option><option>Social media</option><option>Other</option></select></div>
+            <button type="submit" class="btn">Submit</button>
+            <p class="form-note">Preview only — submissions aren't stored yet. We'll connect this to your Google Sheet next.</p>
+          </form>
         </div>
       </div>
     </section>
@@ -145,6 +129,6 @@
         </div>
       </div>
     </footer>
-  <script src="/assets/js/contact.js?v=20260615b"></script>
+  <script src="/assets/js/contact.js?v=20260615c"></script>
 </body>
 </html>

@@ -58,4 +58,19 @@
       }
     });
   });
+
+  // Lead form (display-only preview): confirm receipt, store nothing yet.
+  var form = document.getElementById("lead-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var nameEl = form.querySelector('[name="first"]');
+      var name = nameEl ? nameEl.value.trim() : "";
+      var msg = zh
+        ? ("謝謝" + (name ? "，" + name : "") + "！我們已收到您的訊息（預覽模式，尚未儲存）。")
+        : ("Thanks" + (name ? ", " + name : "") + "! We received your message (preview — not stored yet).");
+      toast(msg);
+      form.reset();
+    });
+  }
 })();

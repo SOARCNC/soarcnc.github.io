@@ -248,6 +248,20 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
 .copy-btn:hover { background: var(--color-accent-dark); }
 .copy-btn[disabled] { opacity: .5; cursor: not-allowed; background: var(--color-muted); border-color: var(--color-muted); }
 
+/* ---- Contact form (lead form) ---- */
+.contact-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2.5rem; align-items: start; }
+.lead-form { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.75rem; }
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .35rem; color: var(--color-text); }
+.field .req { color: var(--color-accent-coral); }
+.field input, .field textarea, .field select { width: 100%; padding: .7rem .8rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-bg); color: var(--color-text); font-family: inherit; font-size: .95rem; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(46,158,68,.15); }
+.field textarea { min-height: 110px; resize: vertical; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.lead-form button.btn { width: 100%; text-align: center; border: none; cursor: pointer; margin-top: .4rem; }
+.form-note { font-size: .8rem; color: var(--color-muted); margin: .8rem 0 0; text-align: center; }
+@media (max-width: 760px) { .contact-layout { grid-template-columns: 1fr; gap: 1.75rem; } .field-row { grid-template-columns: 1fr; } }
+
 /* ---- Toast ---- */
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--color-steel-2); color: #fff; padding: .7rem 1.2rem; border-radius: 8px; font-size: .9rem; opacity: 0; transition: opacity .2s ease; z-index: 9999; pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
 .toast.show { opacity: 1; }
