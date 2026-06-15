@@ -82,9 +82,13 @@ body {
 :lang(zh) {
   line-height: 1.75;
   letter-spacing: 0.02em;
-  word-break: keep-all;
+  word-break: normal;
+  overflow-wrap: anywhere;
   text-align: left;
 }
+/* Safety: let cards/grid items shrink and wrap so text never overflows its box */
+.cap-grid > *, .news-grid > *, .stats > *, .contact-layout > *, .gallery > * { min-width: 0; }
+.cap-card, .news-card, .news-body, .hovercard, .footer-col, p, h1, h2, h3, li { overflow-wrap: break-word; }
 
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.35; margin: 0 0 0.6rem; color: var(--color-text); }
 h1 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); letter-spacing: -0.01em; }
