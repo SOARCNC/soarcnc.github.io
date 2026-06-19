@@ -38,7 +38,7 @@
 ## Quality & compliance
 - Quality is embedded across the workflow, not treated as a final inspection step
 - Structured review of drawings, tolerances and specifications before production
-- Dimensional inspection with calibrated equipment (CMM, optical projector)
+- Dimensional inspection with calibrated metrology: ZEISS SPECTRUM and Hexagon CMMs, SPARK coordinate-measuring machines, 2.5D / VIEWLEAD / Baty optical and profile projectors, Mitutoyo SJ-400 surface-roughness and linear-height gauges, hardness testers, and CCD vision systems
 - Inspection records and full batch traceability aligned to customer requirements
 - Certifications: ISO 9001:2015, ISO 14001:2015, TTQS
 
