@@ -231,10 +231,13 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
 .hero--img { position: relative; background: var(--color-steel-2); overflow: hidden; }
 .hero--img::before {
   content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(180deg, rgba(20,26,31,.74), rgba(20,26,31,.93)), url("/assets/images/cnc-turning-787.webp");
+  background-image: linear-gradient(90deg, rgba(16,21,26,.9) 0%, rgba(16,21,26,.6) 55%, rgba(16,21,26,.42) 100%), url("/assets/images/hero-cnc-1600.webp");
   background-size: cover; background-position: center;
 }
 .hero--img .wrap { position: relative; z-index: 1; }
+@media (min-width: 1600px) {
+  .hero--img::before { background-image: linear-gradient(90deg, rgba(16,21,26,.9) 0%, rgba(16,21,26,.6) 55%, rgba(16,21,26,.42) 100%), url("/assets/images/hero-cnc-1920.webp"); }
+}
 
 /* ---- CTA band ---- */
 .cta-band { background: var(--color-accent); color: #fff; padding: 2.75rem 0; }
@@ -320,6 +323,7 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
   .gallery img { height: 200px; }
   .btn { display: inline-block; }
   .hero .btn, .hero .btn--ghost { margin: .35rem .5rem .35rem 0; }
+  .hero--img::before { background-image: linear-gradient(90deg, rgba(16,21,26,.92), rgba(16,21,26,.7)), url("/assets/images/hero-cnc-800.webp"); }
 }
 @media (max-width: 380px) {
   .site-nav a { padding: .5rem .55rem; font-size: .9rem; }
