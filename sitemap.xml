@@ -44,6 +44,12 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/privacy.html"/>
   </url>
 
+  <url>
+    <loc>https://soartaiwan.com/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/terms.html"/>
+  </url>
+
   <!-- 繁中 pages -->
   <url>
     <loc>https://soartaiwan.com/zh/</loc>
@@ -84,6 +90,12 @@
     <loc>https://soartaiwan.com/zh/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/privacy.html"/>
+  </url>
+
+  <url>
+    <loc>https://soartaiwan.com/zh/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soartaiwan.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://soartaiwan.com/zh/terms.html"/>
   </url>
 
 </urlset>
