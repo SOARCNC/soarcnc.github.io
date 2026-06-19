@@ -238,6 +238,11 @@ a.cap-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover);
 @media (min-width: 1600px) {
   .hero--img::before { background-image: linear-gradient(90deg, rgba(16,21,26,.9) 0%, rgba(16,21,26,.6) 55%, rgba(16,21,26,.42) 100%), url("/assets/images/hero-cnc-1920.webp"); }
 }
+/* Industries Served page uses its own banner (machined-parts collage) */
+.hero--img.hero--industries::before { background-image: linear-gradient(90deg, rgba(16,21,26,.9) 0%, rgba(16,21,26,.6) 55%, rgba(16,21,26,.42) 100%), url("/assets/images/hero-industries-1373.webp"); }
+@media (max-width: 680px) {
+  .hero--img.hero--industries::before { background-image: linear-gradient(90deg, rgba(16,21,26,.92), rgba(16,21,26,.7)), url("/assets/images/hero-industries-800.webp"); }
+}
 
 /* ---- CTA band ---- */
 .cta-band { background: var(--color-accent); color: #fff; padding: 2.75rem 0; }
