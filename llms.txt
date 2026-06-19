@@ -1,0 +1,70 @@
+# SOAR CNC — SOAR Global Enterprise Co., Ltd
+
+> High-precision CNC machining manufacturer based in Taichung, Taiwan. SOAR CNC provides CNC turning, milling and turn-mill (mill-turn) machining of tight-tolerance custom metal parts for OEM and export-oriented projects, plus turnkey finishing and a process-oriented quality system. The focus is precision, process stability and long-term cooperation — not low-cost mass production.
+
+## Company
+- Legal name: SOAR Global Enterprise Co., Ltd (Taiwan VAT / company registration No. 60345849)
+- Brand: SOAR CNC
+- Location: Taichung, Taiwan — a center of high-end CNC machining and machine-tool manufacturing
+- Languages: English and 繁體中文 (Traditional Chinese)
+- Email: info@soartaiwan.com
+- Website: https://soartaiwan.com/
+
+## Services
+- CNC Turning — precision rotational components and shafts
+- CNC Milling — multi-axis machining of complex geometries and custom metal parts
+- Turn-Mill / Mill-Turn — combined turning and milling in a single setup
+- Tight-tolerance machining of functional metal parts
+- Prototype to small and mid-volume OEM and contract manufacturing
+- Design for Manufacturing (DFM) support and end-to-end manufacturing management
+
+## Machining capabilities (specifications)
+- CNC turning bar diameter: Ø3.0 mm to Ø80.0 mm
+- Maximum turning length: 500 mm
+- Milling travel (X·Y·Z): up to 1000 × 500 × 500 mm
+- Achievable tolerance: metals to ±0.02 mm (0.0008"); engineering plastics to ±0.05 mm (0.002")
+- Machine fleet: 90+ CNC machines across turning, sliding-head, turn-mill and machining centres; brands include TAKAMAZ, TSUGAMI, Miyano, DMG, Nakamura-Tome, AMADA, AWEA, FFG and FANUC
+- Metrology: CMM (coordinate measuring machine) and optical projector
+
+## Materials
+- Metals: aluminium, stainless steel, carbon steel, titanium, brass, copper
+- Engineering plastics: POM (Delrin), PEEK, PTFE, nylon
+
+## Value-added / turnkey services
+- Surface finishing: anodizing, plating, sandblasting, powder coating
+- Heat treatment: hardening, tempering
+- Finishing and assembly: precision grinding, laser engraving, light assembly
+
+## Quality & compliance
+- Quality is embedded across the workflow, not treated as a final inspection step
+- Structured review of drawings, tolerances and specifications before production
+- Dimensional inspection with calibrated equipment (CMM, optical projector)
+- Inspection records and full batch traceability aligned to customer requirements
+- Certifications: ISO 9001:2015, ISO 14001:2015, TTQS
+
+## Industries served
+- Aerospace and defense-oriented supply chains
+- Semiconductor
+- Medical and healthcare
+- Industrial equipment and automation
+- High-performance cycling
+- Automotive, HVAC & appliance, and electronics
+
+## Requesting a quote
+Contact info@soartaiwan.com or use https://soartaiwan.com/contact.html. To receive an accurate quotation, include:
+- Technical drawings (PDF and/or STEP files)
+- Material specifications
+- Required tolerances and critical features
+- Target quantities and estimated annual volume
+- Application or industry (industrial, aerospace, defense-oriented, etc.)
+- Required delivery timeline
+
+## Key pages
+- Home: https://soartaiwan.com/
+- Capabilities: https://soartaiwan.com/capabilities.html
+- Quality & Compliance: https://soartaiwan.com/quality.html
+- Industries Served: https://soartaiwan.com/industries.html
+- Service & process: https://soartaiwan.com/service.html
+- About: https://soartaiwan.com/about.html
+- Contact: https://soartaiwan.com/contact.html
+- Traditional Chinese site (繁體中文): https://soartaiwan.com/zh/
