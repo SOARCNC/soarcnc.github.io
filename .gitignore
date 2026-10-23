@@ -23,3 +23,6 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+
+# --- Internal handoff note, not site content ---
+HANDOFF.md
